@@ -1,0 +1,30 @@
+.about {
+  span {
+    font-size: 2rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(2.5rem);
+    padding: 1rem 0;
+  }
+
+  p {
+    @include graph-text(1.5rem);
+    padding: 1rem 0;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-top: 1.5rem;
+      @include title-text(1.7rem);
+
+      svg {
+        padding-right: 1rem;
+        color: $orange;
+      }
+    }
+  }
+}
