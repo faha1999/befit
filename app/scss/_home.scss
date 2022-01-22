@@ -1,0 +1,22 @@
+.home {
+  background: url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  span {
+    font-size: 2.5rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(5rem);
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .home h3 {
+    font-size: 3rem;
+  }
+}
