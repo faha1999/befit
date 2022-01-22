@@ -1,6 +1,19 @@
 .header {
   z-index: 1000;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
+
+  &.active {
+    padding: 2rem 0;
+    background: $white !important;
+
+    .navbar-brand {
+      color: $black !important;
+    }
+
+    .navbar-nav a {
+      color: $black !important;
+    }
+  }
 
   .navbar-brand {
     font-size: 2.5rem;
@@ -34,7 +47,7 @@
     color: $white !important;
 
     &:hover {
-      color: $orange;
+      color: $orange !important;
     }
   }
 
@@ -45,40 +58,38 @@
   }
 
   @media (max-width: 768px) {
-    .navbar-collapse {
-      background-color: $white;
-    }
-    .navbar-nav a {
-      color: $black !important;
+    .header {
+      padding: 2rem;
 
-      &:hover {
-        color: $orange !important;
+      &.active {
+        padding: 2rem;
+      }
+
+      .navbar-nav {
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: $white !important;
+        padding: 1rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        a {
+          color: $black;
+          margin: 1rem 2rem;
+        }
+
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      .navbar-toggler span {
+        .fa-times {
+          transform: rotate(180deg);
+        }
       }
     }
   }
-  // .navbar-toggler {
-  //   color: $orange;
-  // }
-
-  // .navbar-brand {
-  //   font-size: 2.5rem;
-  //   color: $white;
-  //   font-weight: bolder;
-
-  //   span {
-  //     color: $orange;
-  //   }
-  // }
-
-  // .navbar-nav .nav-link {
-  //   font-size: 2rem;
-  //   margin-left: 2rem;
-  //   color: $white;
-
-  //   &:hover {
-  //     color: $orange;
-  //   }
-  // }
 }
 
 // @media (max-width: 768px) {
