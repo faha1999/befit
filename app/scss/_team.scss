@@ -1,0 +1,64 @@
+.team {
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      height: 50rem;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        .content {
+          left: -100%;
+          transition: 0.5s ease-in-out;
+        }
+
+        .share {
+          left: 0;
+          transition: 0.3s ease-in-out;
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        padding: 1rem 2rem;
+
+        span {
+          font-size: 1.7rem;
+          color: $orange;
+        }
+
+        h3 {
+          font-size: 2rem;
+          color: $black;
+        }
+      }
+
+      .share {
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        background: $white;
+        padding: 1.5rem 1rem;
+
+        svg {
+          font-size: 2rem;
+          color: $black;
+          margin: 0 1rem;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
