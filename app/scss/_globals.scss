@@ -48,6 +48,7 @@ section {
   border-radius: 0.5rem;
   font-size: 1.8rem;
   transition: 0.3s ease-in;
+  text-transform: capitalize;
 
   &:hover {
     background: $white;
