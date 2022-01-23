@@ -3,7 +3,7 @@ let navbar = document.querySelector('.header .navbar-nav');
 
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
-  //menu.classList.add('fa-times');
+  //menu.classList.add('fa-times'); fa-xmark
   //document.querySelector('.navbar-toggler').classList.add('fa-times');
   navbar.classList.toggle('active');
 };

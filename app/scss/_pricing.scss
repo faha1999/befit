@@ -1,0 +1,68 @@
+.pricing {
+  .box-container {
+    @include grid(29rem);
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+
+    .box {
+      padding: 2rem;
+      text-align: center;
+      border: $border;
+      background: $bg-color;
+      border-radius: 0.5rem;
+
+      &:nth-child(2) {
+        transform: scale(1.2);
+      }
+
+      &:hover {
+        box-shadow: 0px 10px 15px -3px #ff542138;
+        transition: 0.3s ease-in-out;
+      }
+
+      h3 {
+        @include title-text(2rem);
+        padding-top: 1rem;
+      }
+
+      .price {
+        padding: 1rem 0;
+        @include title-text(6rem);
+        font-weight: bolder;
+
+        span {
+          font-size: 2rem;
+          font-weight: normal;
+        }
+      }
+
+      .list {
+        padding-top: 2rem;
+
+        p {
+          @include graph-text(1.7rem);
+
+          svg {
+            padding-right: 0.5rem;
+            color: $orange;
+
+            &.fa-xmark {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .pricing .box-container {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .box:nth-child(2) {
+      transform: scale(1);
+    }
+  }
+}
