@@ -56,6 +56,23 @@
   }
 }
 
+.join {
+  span {
+    font-size: 2.5rem;
+    color: $orange;
+  }
+
+  h3 {
+    @include title-text(2.7rem);
+    padding-top: 1rem;
+  }
+
+  p {
+    padding: 1rem 0;
+    @include graph-text(1.7rem);
+  }
+}
+
 @media (max-width: 991px) {
   .pricing .box-container {
     margin-top: 0;
@@ -63,6 +80,12 @@
 
     .box:nth-child(2) {
       transform: scale(1);
+    }
+  }
+
+  .join {
+    h3 {
+      font-size: 2.5rem;
     }
   }
 }
